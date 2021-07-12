@@ -122,6 +122,46 @@
           }
         }
       }
+    },
+    "@ngx-eco/ngx-controls": {
+      "projectType": "library",
+      "root": "src/ngx-controls",
+      "sourceRoot": "src/ngx-controls/src",
+      "prefix": "ngx",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "src/ngx-controls/tsconfig.lib.json",
+            "project": "src/ngx-controls/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "src/ngx-controls/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/ngx-controls/src/test.ts",
+            "tsConfig": "src/ngx-controls/tsconfig.spec.json",
+            "karmaConfig": "src/ngx-controls/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "src/ngx-controls/tsconfig.lib.json",
+              "src/ngx-controls/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-controls"
