@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 // Project
 import { NgxInputModule } from '@ngx-eco/ngx-controls';
+import { NgxTextareaModule } from '@ngx-eco/ngx-controls';
 
 
 
@@ -19,6 +20,7 @@ import { NgxInputModule } from '@ngx-eco/ngx-controls';
     BrowserModule,
     NgxInputModule,
     AppRoutingModule,
+    NgxTextareaModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
