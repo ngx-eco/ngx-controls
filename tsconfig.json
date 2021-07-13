@@ -17,8 +17,8 @@
     ],
     "paths": {
       "@ngx-eco/ngx-controls": [
-        "dist/ngx-eco/ngx-controls/ngx-eco-ngx-controls",
-        "dist/ngx-eco/ngx-controls"
+        "dist/lib/ngx-eco-ngx-controls",
+        "dist/lib"
       ]
     }
   }

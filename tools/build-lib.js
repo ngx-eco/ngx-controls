@@ -9,7 +9,7 @@ const LIB_DIR = `dist/lib`;
 
 
 const FILES = [
-  `src/ngx-button/package.json`,
+  `src/ngx-controls/package.json`,
   `CHANGELOG.md`,
   `LICENSE.md`,
   `README.md`
