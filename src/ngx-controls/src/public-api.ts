@@ -1,7 +1,2 @@
-/*
- * Public API Surface of ngx-controls
- */
-
-export * from './lib/ngx-controls.service';
-export * from './lib/ngx-controls.component';
-export * from './lib/ngx-controls.module';
+export * from './lib/ngx-input/ngx-input.module';
+export * from './lib/ngx-input/ngx-input.component';
