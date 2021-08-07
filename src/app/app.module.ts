@@ -1,5 +1,6 @@
 // Angular
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 // App
@@ -21,6 +22,7 @@ import { NgxTextareaModule } from '@ngx-eco/ngx-controls';
     NgxInputModule,
     AppRoutingModule,
     NgxTextareaModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

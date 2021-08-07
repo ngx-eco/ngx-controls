@@ -1,5 +1,6 @@
 // Angular
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 
 
@@ -8,5 +9,23 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+
+  public form: FormGroup;
+
+  constructor(
+    private formBuilder: FormBuilder,
+  ) { }
+
+  ngOnInit(): void {
+    this.initForm();
+  }
+
+  private initForm(): void {
+    this.form = this.formBuilder.group({
+      simplyInput: [ null ],
+      simplyTextarea: [ null ],
+    })
+  }
+
 }
