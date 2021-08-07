@@ -3,8 +3,8 @@
   <span
     class="required"
     *ngIf="required">
-      *
-    </span>
+    *
+  </span>
 </label>
 
 <textarea
@@ -15,7 +15,7 @@
   (blur)="onTouched()"
   [disabled]="disabled"
   [placeholder]="placeholder"
-  (input)="onChange($event.target.value)">
+  (input)="onChange($any($event.target).value)">
 </textarea>
 
 <svg

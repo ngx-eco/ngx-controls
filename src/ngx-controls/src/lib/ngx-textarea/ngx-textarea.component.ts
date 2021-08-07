@@ -7,17 +7,20 @@ import { ControlValueAccessor, Validator, AbstractControl, ValidatorFn, Validato
 @Component({
   selector: 'ngx-textarea',
   templateUrl: './ngx-textarea.component.html',
-  styleUrls: ['./ngx-textarea.component.scss']
+  styleUrls: ['./ngx-textarea.component.scss'],
+  host: {
+    'class': 'ngx-controls ngx-controls-textarea'
+  }
 })
 export class NgxTextareaComponent implements ControlValueAccessor, Validator, OnInit {
 
 
   @ViewChild('textarea', {static: true}) textarea: ElementRef;
-  disabled;
+  public disabled: boolean;
 
   @Input() required: boolean = false;
-  @Input() pattern: string = null;
-  @Input() label: string = null;
+  @Input() pattern: string = '';
+  @Input() label: string = '';
   @Input() placeholder: string;
   @Input() error: string;
   @Input() name: string;
@@ -30,7 +33,7 @@ export class NgxTextareaComponent implements ControlValueAccessor, Validator, On
   }
 
   ngOnInit() {
-    const control = this.ngControl.control;
+    const control = (this.ngControl.control as AbstractControl);
     const validators: ValidatorFn[] = control.validator ? [control.validator] : [];
     if (this.required) {
       validators.push(Validators.required);
@@ -42,7 +45,7 @@ export class NgxTextareaComponent implements ControlValueAccessor, Validator, On
     control.updateValueAndValidity();
   }
 
-  onChange(event) { }
+  onChange(event: any) { }
 
   onTouched() { }
 
@@ -71,12 +74,15 @@ export class NgxTextareaComponent implements ControlValueAccessor, Validator, On
   }
 
   public isSuccess(): boolean {
-    return ((this.required && this.ngControl && this.ngControl.control.valid && this.ngControl.control.touched) ||
+    const ngControl: NgControl = this.ngControl;
+    const control: AbstractControl = (ngControl.control as AbstractControl);
+    return ((this.required && ngControl && control.valid && control.touched) ||
     !this.required && this.textarea.nativeElement.value.length > 0)
   }
 
   public isError(): boolean {
-    return (this.ngControl && !this.ngControl.control.valid && this.ngControl.control.touched);
+    const control: AbstractControl = (this.ngControl.control as AbstractControl);
+    return (this.ngControl && !control.valid && control.touched);
   }
 
 }

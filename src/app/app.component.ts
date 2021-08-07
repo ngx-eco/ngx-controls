@@ -1,6 +1,7 @@
 // Angular
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { NgxThemesService } from '@ngx-eco/ngx-themes';
 
 
 
@@ -14,6 +15,7 @@ export class AppComponent implements OnInit {
   public form: FormGroup;
 
   constructor(
+    private themes: NgxThemesService,
     private formBuilder: FormBuilder,
   ) { }
 
