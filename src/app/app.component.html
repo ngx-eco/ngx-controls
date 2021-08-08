@@ -1,12 +1,24 @@
 <form action="" [formGroup]="form">
 
-  <ngx-input>
+  <ngx-input
+    name="simplyInput"
+    label="simplyInput"
+    placeholder="simplyInput"
+    formControlName="simplyInput">
   </ngx-input>
 
   <ngx-textarea
     name="simplyTextarea"
-    label="Ваш логин"
-    placeholder="Ваш логин"
+    label="simplyTextarea"
+    placeholder="simplyTextarea"
+    formControlName="simplyTextarea">
+  </ngx-textarea>
+
+  <ngx-textarea
+    class="warn"
+    name="simplyTextarea"
+    label="simplyTextarea"
+    placeholder="simplyTextarea"
     formControlName="simplyTextarea">
   </ngx-textarea>
 

@@ -9,8 +9,8 @@ import { ControlValueAccessor, Validator, AbstractControl, ValidatorFn, Validato
   templateUrl: './ngx-textarea.component.html',
   styleUrls: ['./ngx-textarea.component.scss'],
   host: {
-    'class': 'ngx-controls ngx-controls-textarea'
-  }
+    'class': 'ngx-controls ngx-controls-textarea',
+  },
 })
 export class NgxTextareaComponent implements ControlValueAccessor, Validator, OnInit {
 
