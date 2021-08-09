@@ -1,11 +1,38 @@
 {
   "name": "@ngx-eco/ngx-controls",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "description": "Angular custom controls module",
+  "author": "fil0157 <fil0157@ya.ru>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngx-eco/ngx-controls.git"
+  },
+  "homepage": "https://ngx-controls.ngx-eco.ru",
+  "bugs": {
+    "url": "https://github.com/ngx-eco/ngx-controls/issues"
+  },
   "peerDependencies": {
-    "@angular/common": "^12.1.0",
-    "@angular/core": "^12.1.0"
+    "@angular/common": ">=12.0.0 <13.0.0",
+    "@angular/core": ">=12.0.0 <13.0.0"
   },
   "dependencies": {
     "tslib": "^2.2.0"
-  }
+  },
+  "keywords": [
+    "angular",
+    "controls",
+    "input",
+    "textarea",
+    "ngx",
+    "typescript"
+  ],
+  "main": "bundles/ngx-eco-ngx-controls.umd.js",
+  "module": "fesm2015/ngx-eco-ngx-controls.js",
+  "es2015": "fesm2015/ngx-eco-ngx-controls.js",
+  "esm2015": "esm2015/ngx-eco-ngx-controls.js",
+  "fesm2015": "fesm2015/ngx-eco-ngx-controls.js",
+  "typings": "ngx-eco-ngx-controls.d.ts",
+  "metadata": "ngx-eco-ngx-controls.metadata.json",
+  "sideEffects": false
 }
