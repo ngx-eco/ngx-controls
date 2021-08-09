@@ -1,29 +1,29 @@
-<label class="label">
+<label class="ngx-controls__label ngx-controls-input__label">
   {{label}}
   <span
-    class="required"
-    *ngIf="required">
+    *ngIf="required"
+    class="ngx-controls__required ngx-controls-input__required">
     *
   </span>
 </label>
 
 <input
   #input
-  class="input"
   [name]="name"
   [type]="type"
   (blur)="onTouched()"
   [disabled]="disabled"
   [placeholder]="placeholder"
-  (input)="onChange($any($event.target).value)"/>
+  (input)="onChange($any($event.target).value)"
+  class="ngx-controls__input ngx-controls-input__input"/>
 
 <svg
   width="12"
   height="10"
-  class="success"
   viewBox="0 0 12 10"
   *ngIf="isSuccess()"
-  xmlns="http://www.w3.org/2000/svg">
+  xmlns="http://www.w3.org/2000/svg"
+  class="ngx-controls__success ngx-controls-input__success">
   <path
     fill="#3589FE"
     fill-rule="nonzero"
@@ -31,6 +31,6 @@
   </path>
 </svg>
 
-<div class="error">
+<div class="ngx-controls__error ngx-controls-input__error">
   <ng-container *ngIf="isError()">{{error}}</ng-container>
 </div>

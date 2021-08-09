@@ -1,6 +1,8 @@
 // Angular
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+// Libs
 import { NgxThemesService } from '@ngx-eco/ngx-themes';
 
 
@@ -25,7 +27,7 @@ export class AppComponent implements OnInit {
 
   private initForm(): void {
     this.form = this.formBuilder.group({
-      simplyInput: [ null ],
+      simplyInput: [ null, Validators.required ],
       simplyTextarea: [ null ],
     })
   }

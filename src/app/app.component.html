@@ -1,6 +1,8 @@
 <form action="" [formGroup]="form">
 
   <ngx-input
+    error="error"
+    [required]="true"
     name="simplyInput"
     label="simplyInput"
     placeholder="simplyInput"
@@ -8,6 +10,8 @@
   </ngx-input>
 
   <ngx-textarea
+    error="error"
+    [required]="true"
     name="simplyTextarea"
     label="simplyTextarea"
     placeholder="simplyTextarea"
@@ -16,6 +20,8 @@
 
   <ngx-textarea
     class="warn"
+    error="error"
+    [required]="true"
     name="simplyTextarea"
     label="simplyTextarea"
     placeholder="simplyTextarea"

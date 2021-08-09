@@ -1,8 +1,8 @@
-<label class="label">
+<label class="ngx-controls__label ngx-controls-textarea__label">
   {{label}}
   <span
-    class="required"
-    *ngIf="required">
+    *ngIf="required"
+    class="ngx-controls__required ngx-controls-textarea__required">
     *
   </span>
 </label>
@@ -11,20 +11,20 @@
   #textarea
   [name]="name"
   [rows]="rows"
-  class="textarea"
   (blur)="onTouched()"
   [disabled]="disabled"
   [placeholder]="placeholder"
-  (input)="onChange($any($event.target).value)">
+  (textarea)="onChange($any($event.target).value)"
+  class="ngx-controls__textarea ngx-controls-textarea__textarea">
 </textarea>
 
 <svg
   width="12"
   height="10"
-  class="success"
   *ngIf="isSuccess()"
   viewBox="0 0 12 10"
-  xmlns="http://www.w3.org/2000/svg">
+  xmlns="http://www.w3.org/2000/svg"
+  class="ngx-controls__success ngx-controls-textarea__success">
   <path
     fill="#3589FE"
     fill-rule="nonzero"
@@ -32,7 +32,7 @@
   </path>
 </svg>
 
-<div class="error">
+<div class="ngx-controls__error ngx-controls-textarea__error">
   <ng-container *ngIf="isError()">
     {{error}}
   </ng-container>
