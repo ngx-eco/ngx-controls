@@ -22,8 +22,8 @@ export class NgxInputComponent implements ControlValueAccessor, Validator, OnIni
   @Input() required: boolean = false;
   @Input() pattern: string = '';
   @Input() label: string = '';
-  @Input() placeholder: string;
-  @Input() error: string;
+  @Input() placeholder: string = '';
+  @Input() error: string = '';
   @Input() name: string;
 
   constructor(

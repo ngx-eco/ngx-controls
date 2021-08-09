@@ -21,8 +21,8 @@ export class NgxTextareaComponent implements ControlValueAccessor, Validator, On
   @Input() required: boolean = false;
   @Input() pattern: string = '';
   @Input() label: string = '';
-  @Input() placeholder: string;
-  @Input() error: string;
+  @Input() placeholder: string = '';
+  @Input() error: string = '';
   @Input() name: string;
   @Input() rows: number = 3;
 
